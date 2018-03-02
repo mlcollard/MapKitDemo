@@ -11,13 +11,22 @@ import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate {
     
-    
     @IBOutlet weak var mapView: MKMapView!
+    
+    lazy var location = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.mapView.delegate = self
+        
+        // request to use the location when in the foreground
+        /* Note: MUST have key "Privacy - Location When In Use" in your info.plist,
+         or THIS WILL FAIL SILENTLY */
+        location.requestWhenInUseAuthorization()
+        
+        /* Note: Default is false */
+        self.mapView.showsUserLocation = true
         
         // satellite and road name info
         self.mapView.mapType = .hybrid
@@ -28,6 +37,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         // zoom the map to the location
         self.mapView.setRegion(mapRegion, animated: true)
+    }
+
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        
+        // region around user location
+        let mapRegion = MKCoordinateRegion(center: userLocation.coordinate, span: MKCoordinateSpanMake(0.01, 0.01))
+        
+        // zoom the map to the user location
+        mapView.setRegion(mapRegion, animated: true)
     }
 
 }
