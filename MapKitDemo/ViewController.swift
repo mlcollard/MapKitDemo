@@ -18,6 +18,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
 
         self.mapView.delegate = self
+        
+        // satellite and road name info
+        self.mapView.mapType = .hybrid
 
         // region around UA
         let UALocation = CLLocationCoordinate2DMake(41.0778312683105, -81.510684290037237)
