@@ -15,6 +15,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     lazy var location = CLLocationManager()
     
+    lazy var ua:MKPointAnnotation = {
+        
+        var ann = MKPointAnnotation()
+        ann.coordinate = CLLocationCoordinate2DMake(41.0778312683105, -81.510684290037237)
+        ann.title = "UA"
+        ann.subtitle = "CAS"
+        
+        return ann
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,12 +44,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         // zoom the map to the location
         self.mapView.setRegion(mapRegion, animated: true)
+        
+        // add an annotation for UA
+        self.mapView.addAnnotation(ua)
     }
 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         
         // region around user location
-        let mapRegion = MKCoordinateRegion(center: userLocation.coordinate, span: MKCoordinateSpanMake(0.01, 0.01))
+        let mapRegion = MKCoordinateRegion(center: userLocation.coordinate, span: MKCoordinateSpanMake(0.001, 0.001))
         
         // zoom the map to the user location
         mapView.setRegion(mapRegion, animated: true)
