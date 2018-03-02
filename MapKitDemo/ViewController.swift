@@ -18,7 +18,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
 
         self.mapView.delegate = self
+
+        // region around UA
+        let UALocation = CLLocationCoordinate2DMake(41.0778312683105, -81.510684290037237)
+        let mapRegion = MKCoordinateRegion(center: UALocation, span: MKCoordinateSpanMake(0.001, 0.001))
         
+        // zoom the map to the location
+        self.mapView.setRegion(mapRegion, animated: true)
     }
 
 }
