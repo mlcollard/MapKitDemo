@@ -30,6 +30,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
         self.mapView.delegate = self
         
+        // Note: consider changing to only what is needed
+        location.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        
         // request to use the location when in the foreground
         location.requestWhenInUseAuthorization()
         
