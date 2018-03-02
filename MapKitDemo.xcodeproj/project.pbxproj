@@ -11,7 +11,6 @@
 		88887FFB2049866900E7FEEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88887FFA2049866900E7FEEC /* ViewController.swift */; };
 		88887FFE2049866900E7FEEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88887FFC2049866900E7FEEC /* Main.storyboard */; };
 		888880002049866900E7FEEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88887FFF2049866900E7FEEC /* Assets.xcassets */; };
-		888880032049866900E7FEEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888880012049866900E7FEEC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +19,6 @@
 		88887FFA2049866900E7FEEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		88887FFD2049866900E7FEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88887FFF2049866900E7FEEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		888880022049866900E7FEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		888880042049866900E7FEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +56,6 @@
 				88887FFA2049866900E7FEEC /* ViewController.swift */,
 				88887FFC2049866900E7FEEC /* Main.storyboard */,
 				88887FFF2049866900E7FEEC /* Assets.xcassets */,
-				888880012049866900E7FEEC /* LaunchScreen.storyboard */,
 				888880042049866900E7FEEC /* Info.plist */,
 			);
 			path = MapKitDemo;
@@ -123,7 +120,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888880032049866900E7FEEC /* LaunchScreen.storyboard in Resources */,
 				888880002049866900E7FEEC /* Assets.xcassets in Resources */,
 				88887FFE2049866900E7FEEC /* Main.storyboard in Resources */,
 			);
@@ -150,14 +146,6 @@
 				88887FFD2049866900E7FEEC /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		888880012049866900E7FEEC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				888880022049866900E7FEEC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
