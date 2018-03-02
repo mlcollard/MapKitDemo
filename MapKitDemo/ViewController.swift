@@ -50,6 +50,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         // add an annotation for UA
         self.mapView.addAnnotation(ua)
+
+        // now ready for the location updates
+        location.startUpdatingLocation()
     }
 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
