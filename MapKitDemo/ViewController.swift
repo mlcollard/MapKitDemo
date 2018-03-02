@@ -21,11 +21,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         self.mapView.delegate = self
         
         // request to use the location when in the foreground
-        /* Note: MUST have key "Privacy - Location When In Use" in your info.plist,
-         or THIS WILL FAIL SILENTLY */
         location.requestWhenInUseAuthorization()
         
-        /* Note: Default is false */
         self.mapView.showsUserLocation = true
         
         // satellite and road name info
@@ -47,5 +44,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         // zoom the map to the user location
         mapView.setRegion(mapRegion, animated: true)
     }
+    
+    func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {
+        print(#function)
+        print(error)
+    }
+
+    func mapView(_ mapView: MKMapView, didFailToLocateUserWithError error: Error) {
+        print(#function)
+        print(error)
+    }
+
 
 }
